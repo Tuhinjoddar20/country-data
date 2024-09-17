@@ -1,0 +1,123 @@
+
+
+body{
+    --background-color:#708480;
+    --text-color:black;
+    --elements-color:#708480;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark{
+    --background-color:hsl(207,26%,17%);
+    --text-color:white;
+    --elements-color: hsl(209, 23%, 22%);
+}
+
+
+.back-btn{ 
+    /* <a> tag do not content margin and padding,  display: inline-block; then it work. */
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0 0 14px 0 rgba(0,0,0, 0.2);
+    padding: 5px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+main.dark .back-btn{
+    background-color: rgb(50, 46, 46);
+}
+
+.details-text-container{
+    width: 100%;
+}
+.country-details{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin: 15px  0 0 15px
+    
+}
+.country-details img{
+    max-width: 40%;
+  
+}
+.country-name{
+    margin-bottom: 35px;
+}
+
+.details-text{
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap:10px;
+    column-gap: 40px;
+    max-height: 160px;
+    flex-wrap: wrap;    
+}
+
+.country-details-container{
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.details-text p{
+    margin: 0px;
+}
+.border-countries {
+    margin: 40px 0;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.border-countries p{
+    margin: 0 0 0 5px;  
+}
+
+ .borderGap{
+    padding: 3px 5px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0, 0.4);
+    border-radius: 5px;
+    margin-inline: 5px;
+    font-size: 14px;
+    display:inline-flex;
+    margin-bottom: 7px;   
+}
+
+main.dark .borderGap{
+    background-color: rgb(53, 50, 50);
+}
+
+
+.pageNotFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    font-size:2rem;
+    font-weight: bold;
+}
+
+
+
+@media(max-width:940px){
+    .country-details{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .details-text{
+       max-height: unset;
+       max-width: fit-content;
+    }
+    .country-details img{
+        max-width: 50%;
+        height: 300px;     
+    }
+    .country-name{
+        margin-bottom: 20px;
+    }
+    .border-countries b{
+        font-size: 0.97rem;
+    }
+}
